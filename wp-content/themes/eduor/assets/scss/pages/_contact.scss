@@ -1,0 +1,217 @@
+// <!--Sc Contact CSS -->
+.contact-page-service-box {
+    display: flex;
+    align-items: center;
+    .contact_icon {
+        i {
+            background: $secondaryColor;
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            text-align: center;
+            border-radius: 20px;
+            color: $whiteColor;
+            display: inline-block;
+            font-size: 30px;
+            margin-bottom: 30px;
+            margin-right: 30px;
+        }
+    }
+    .contact-service-box {
+        margin-top: -25px;
+        ul {
+            li {
+                color: #424242;
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 1.3;
+                font-family: $titleFont;
+                a {
+                    color: #424242;
+                    @include transition();
+                    &:hover {
+                        color: $primaryColor;
+                    }
+                }
+                span {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+.contact-box {
+    input {
+        &.from-control {
+            width: 100%;
+            margin-bottom: 30px;
+            padding: 15px 20px;
+            border: 2px solid #eef0f1;
+            border-radius: 3px;
+        }
+    }
+    ::placeholder {
+        color: $bodyColor;
+        opacity: 1;
+    }
+    :-ms-input-placeholder {
+        color: $bodyColor;
+    }
+    ::-ms-input-placeholder {
+        color: $bodyColor;
+    }
+    textarea {
+        width: 100%;
+        margin-bottom: 20px;
+        border-radius: 3px;
+        padding: 15px 20px;
+        height: 160px;
+        border: 2px solid #eef0f1;
+    }
+    .sc-primary-btn {
+        padding: 15px 35px;
+    }
+    h3 {
+        display: block;
+        margin-bottom: 30px;
+    }
+    input[type="checkbox"] {
+        margin: 10px 0 34px;
+    }
+    input[type="submit"] {
+        color: #fff;
+        font-weight: 500;
+    }
+}
+.sc-contact-info {
+    background: #f7f7f7;
+    border-radius: 2px;
+    padding: 50px;
+    ul {
+        li {
+            display: flex;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 30px;
+            color: $titleColor;
+            a {
+                color: $titleColor;
+            }
+            svg {
+                margin-right: 20px;
+                position: relative;
+                top: 7px;
+            }
+            i {
+                padding-top: 7px;
+                margin-right: 20px;
+                color: $primaryColor;
+            }
+            a:hover,
+            i {
+                color: $primaryColor;
+            }
+            + li {
+                padding-top: 20px;
+            }
+        }
+    }
+}
+.sc-chat-box {
+    .sc-transparent-btn {
+        display: block;
+        text-align: center;
+        padding: 16px 35px;
+        i {
+            position: relative;
+            top: 2px;
+            @include transition();
+        }
+        &:hover {
+            i {
+                color: #fff;
+            }
+        }
+    }
+}
+.sc-google-map {
+    position: relative;
+    top: 10px;
+    .sc-gray-icon {
+        position: absolute;
+        top: 42%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9;
+        animation: bounce 2s infinite;
+        -webkit-animation: bounce 2s infinite;
+        -moz-animation: bounce 2s infinite;
+        -o-animation: bounce 2s infinite;
+        i {
+            color: $primaryColor;
+            font-size: 50px;
+        }
+    }
+}
+@-webkit-keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -webkit-transform: translateY(0);
+    }
+    40% {
+        -webkit-transform: translateY(-30px);
+    }
+    60% {
+        -webkit-transform: translateY(-15px);
+    }
+}
+
+@-moz-keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -moz-transform: translateY(0);
+    }
+    40% {
+        -moz-transform: translateY(-30px);
+    }
+    60% {
+        -moz-transform: translateY(-15px);
+    }
+}
+
+@-o-keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -o-transform: translateY(0);
+    }
+    40% {
+        -o-transform: translateY(-30px);
+    }
+    60% {
+        -o-transform: translateY(-15px);
+    }
+}
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}

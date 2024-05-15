@@ -1,0 +1,101 @@
+// <!--Sc form CSS -->
+.sc-form-section-area {
+    background: url(../images/bg/form-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-bottom: 194px;
+}
+.sc-form-inner {
+    background: transparent;
+    max-width: 645px;
+    .sc-heading-area {
+        .sub-title {
+            color: #fff;
+        }
+    }
+    .sc-form-area {
+        padding: 0;
+    }
+    .sc-slider-form {
+        margin-bottom: 20px;
+        textarea,
+        input {
+            background: #353950;
+            border-radius: 3px;
+            color: #fff;
+            padding: 18px 20px;
+        }
+        textarea {
+            height: 160px;
+            margin-bottom: 0;
+        }
+    }
+    .select-selected {
+        box-shadow: none;
+        background: #353950 !important;
+        padding: 18px !important;
+        color: #d6d7e5 !important;
+    }
+}
+.sc-google-map iframe {
+    width: 100%;
+}
+.select-services-two {
+    &::before {
+        color: rgba($color: #fff, $alpha: 0.5);
+        font-size: 9px !important;
+    }
+}
+.sc-form-image {
+    background-image: url(../images/bg/form-inner-bg.jpg);
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-repeat: no-repeat;
+    height: 76%;
+    width: 47%;
+    border-radius: 0 0 0 5px;
+}
+.sc-form-pages-area {
+    background: url(../images/bg/form-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-bottom: 80px;
+}
+.sc-page-form-image {
+    background-image: url(../images/team/team-image.jpg);
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 47%;
+    border-radius: 0 0 0 5px;
+}
+.sc-footer-cta-four {
+    .sc-cta-content {
+        flex-wrap: wrap;
+    }
+    .sc-cta-form {
+        width: 37%;
+    }
+}
+
+::placeholder {
+    color: #d6d7e5 !important;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #d6d7e5 !important;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #d6d7e5 !important;
+}

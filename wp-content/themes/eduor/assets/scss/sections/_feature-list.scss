@@ -1,0 +1,47 @@
+.sc-features-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+        display: flex;
+        .icon-area {
+            margin-right: 20px;
+        }
+        .text-area {
+            a {
+                display: block;
+                font-size: 20px;
+            }
+        }
+    }
+}
+.text-area {
+    .sc-feature-text {
+    }
+    a {
+        color: #03041c;
+        font-weight: 700;
+        margin-bottom: 15px;
+        transition: 0.4s;
+    }
+}
+.sc-recent-post .recent-text a {
+    color: #03041c;
+}
+.sc-features-list {
+    li {
+        .title {
+            transition: 0.4s;
+        }
+    }
+}
+.sc-features-list li:last-child {
+    border: none !important;
+}
+
+.sce-nav-menu {
+    padding: 0 40px 0 30px;
+}
+.elementor-element-264a256 nav > .sce-nav-menu > li:last-child {
+    border: none !important;
+}

@@ -1,0 +1,287 @@
+// <!--Sc Company CSS -->
+.sc-project-section-area {
+    position: relative;
+    &.nagetive-margin {
+        margin-top: -190px;
+    }
+}
+.sc-project-item {
+    position: relative;
+    transition: 0.4s;
+    overflow: hidden;
+    margin-bottom: 15px;
+    img {
+        border-radius: 5px;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        background: #e42032;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+        border-radius: 5px;
+        bottom: -100%;
+        @include transition();
+    }
+    .sc-project-content-box {
+        .sc-project-icon {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            visibility: hidden;
+            @include transition(0.7s);
+            i {
+                color: $primaryColor;
+                width: 70px;
+                height: 70px;
+                line-height: 70px;
+                border-radius: 50%;
+                font-size: 15px;
+                text-align: center;
+                display: inline-block;
+                background: $whiteColor;
+                @include transition();
+                transform: rotate(0deg);
+                &:hover {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+        .sc-project-text {
+            position: absolute;
+            bottom: 30px;
+            left: 40px;
+            opacity: 0;
+            visibility: hidden;
+            @include transition(0.7s);
+            a {
+                @include transition();
+                color: #fff;
+                &::hover {
+                    opacity: 0.5;
+                }
+            }
+            .sub-title {
+                position: relative;
+                font-weight: 500;
+                font-size: 16px;
+                color: #fff;
+                padding-left: 18px;
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 5px;
+                    height: 2px;
+                    background: #ffffff;
+                    left: 0;
+                    top: 8px;
+                }
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 5px;
+                    height: 2px;
+                    background: #ffffff;
+                    left: 7px;
+                    top: 8px;
+                }
+            }
+        }
+    }
+    &:hover {
+        &::before {
+            opacity: 0.8;
+            visibility: visible;
+            bottom: 0;
+            border-radius: 5px;
+        }
+        .sc-project-icon,
+        .sc-project-text {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+.sc-project-filter button {
+    text-transform: capitalize;
+}
+// sc-project-content-style
+.sc-project-content-style {
+    position: relative;
+    transition: 0.4s;
+    overflow: hidden;
+    border: 20px solid $whiteColor;
+    &::before {
+        content: "";
+        position: absolute;
+        background: #e42032;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+        bottom: -100%;
+        @include transition();
+    }
+    .sc-project-content-box {
+        .sc-project-icon {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            visibility: hidden;
+            @include transition(0.7s);
+            i {
+                color: $primaryColor;
+                width: 70px;
+                height: 70px;
+                line-height: 70px;
+                border-radius: 50%;
+                font-size: 15px;
+                text-align: center;
+                display: inline-block;
+                background: $whiteColor;
+                @include transition();
+                transform: rotate(0deg);
+                &:hover {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+        .sc-project-text {
+            position: absolute;
+            bottom: 30px;
+            left: 40px;
+            opacity: 0;
+            visibility: hidden;
+            @include transition(0.7s);
+            a {
+                @include transition();
+                color: #fff;
+                &::hover {
+                    opacity: 0.5;
+                }
+            }
+            .sub-title {
+                position: relative;
+                font-weight: 500;
+                font-size: 16px;
+                color: #fff;
+                padding-left: 18px;
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 5px;
+                    height: 2px;
+                    background: #ffffff;
+                    left: 0;
+                    top: 8px;
+                }
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 5px;
+                    height: 2px;
+                    background: #ffffff;
+                    left: 7px;
+                    top: 8px;
+                }
+            }
+        }
+    }
+    &:hover {
+        &::before {
+            opacity: 0.8;
+            visibility: visible;
+            bottom: 0;
+        }
+        .sc-project-icon,
+        .sc-project-text {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+// sc-project-section-two
+.sc-project-section-two {
+    position: relative;
+    background: $whiteColor;
+    margin-top: 0;
+    padding: 30px 40px 0 50px;
+}
+// sc-project-section-three
+.sc-project-section-three {
+    padding-bottom: 200px;
+    margin-top: 0;
+}
+
+// sc-project-content-area
+.sc-project-content-area {
+    .sc-title {
+        margin-bottom: 25px;
+        font-size: 30px;
+    }
+    .sc-project-inner-category {
+        border-radius: 5px;
+        .sc-inner-title {
+            background: $primaryColor;
+            border-radius: 5px 5px 0px 0px;
+            padding: 30px 40px;
+            .cate-title {
+                margin-bottom: 0;
+                font-size: 30px;
+            }
+        }
+        .sc-inner-list {
+            background: $titleColor;
+            padding: 35px 40px 5px;
+            border-radius: 0 0 5px 5px;
+            .list-gap {
+                li {
+                    border-bottom: 1px solid rgba($color: #fff, $alpha: 0.2);
+                    padding-bottom: 10px;
+                    margin-bottom: 20px;
+                    &:last-child {
+                        border: none;
+                        margin-bottom: 7px;
+                    }
+                    span {
+                        color: #d6d7e5;
+                    }
+                }
+            }
+        }
+    }
+    .sc-working-content-box {
+        .sc-content-box {
+            border: 2px solid #eeeff1;
+            text-align: center;
+            padding: 30px 35px 10px;
+            margin-bottom: 45px;
+            border-radius: 5px;
+            @include transition();
+            &:hover {
+                border-color: $primaryColor;
+            }
+        }
+    }
+    .sc-related-content {
+        .sc-related-check {
+            .list-gap {
+                li {
+                    margin-bottom: 15px;
+                    svg {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

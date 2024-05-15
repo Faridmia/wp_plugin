@@ -1,0 +1,123 @@
+// <!--Sc Team CSS -->
+.team-content-box {
+    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.05);
+    padding: 20px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    .team-image {
+        position: relative;
+        overflow: hidden;
+    }
+    .team-social-icon {
+        ul {
+            position: absolute;
+            left: 50%;
+            bottom: 20px;
+            transform: translateX(-50%);
+            width: 100%;
+            li {
+                display: inline-block;
+                padding: 0 2px;
+                a {
+                    width: 30px;
+                    height: 30px;
+                    line-height: 25px;
+                    border-radius: 30px;
+                    text-align: center;
+                    display: inline-block;
+                    background: $whiteColor;
+                    color: $bodyColor;
+                    transform: translateY(80px);
+                    opacity: 0;
+                    @include transition();
+                    &:hover {
+                        background: $primaryColor;
+                        color: $whiteColor;
+                    }
+                }
+                &:nth-child(1) {
+                    a {
+                        transition-delay: 0.1s;
+                    }
+                }
+                &:nth-child(2) {
+                    a {
+                        transition-delay: 0.2s;
+                    }
+                }
+                &:nth-child(3) {
+                    a {
+                        transition-delay: 0.3s;
+                    }
+                }
+                &:nth-child(4) {
+                    a {
+                        transition-delay: 0.4s;
+                    }
+                }
+            }
+        }
+    }
+    .team-author {
+        .team-title {
+            a {
+                color: $titleColor;
+                @include transition();
+                &:hover {
+                    color: $primaryColor;
+                }
+            }
+        }
+        span {
+            color: $bodyColor;
+        }
+    }
+    &:hover {
+        box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.07);
+        .team-social-icon {
+            a {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    }
+}
+// team details css
+.content-area {
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(201, 193, 193, 0.3);
+    padding: 40px;
+    .details-area {
+        .personal-info {
+            margin-top: 25px;
+            margin-bottom: 20px;
+            li {
+                i {
+                    color: $primaryColor;
+                    font-size: 20px;
+                    font-family: $titleFont;
+                    margin-right: 10px;
+                }
+                a {
+                    color: $bodyColor;
+                    @include transition();
+                    &:hover {
+                        color: $primaryColor;
+                    }
+                }
+            }
+        }
+        .team-rating {
+            margin-bottom: 35px;
+            .rating-list {
+                li {
+                    display: inline-block;
+                    margin-right: 70px;
+                    i {
+                        color: $primaryColor;
+                    }
+                }
+            }
+        }
+    }
+}

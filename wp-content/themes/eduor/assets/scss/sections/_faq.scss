@@ -1,0 +1,175 @@
+// <!--Sc Faq CSS -->
+.sc-accordion-section-area {
+    background: url(../images/bg/essential-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-top: 275px;
+    margin-top: -175px;
+
+    .sc-essential-image img {
+        position: relative;
+        z-index: 3;
+    }
+    .sc-essential-shape {
+        position: absolute;
+        right: 0;
+        top: -10px;
+    }
+}
+.sc-faq-style {
+    .accordion-item {
+        border: none;
+        margin-bottom: 20px;
+        padding: 8px 0;
+        background: #ffffff;
+        box-shadow: 0px 1px 4px rgba(3, 4, 27, 0.06);
+        .accordion-header {
+            position: relative;
+            .accordion-button {
+                font-size: 20px;
+                background: #ffffff;
+                padding: 18px 25px;
+                color: $titleColor;
+                font-weight: 600;
+                position: relative;
+                font-family: $titleFont;
+                &:before {
+                    position: absolute;
+                    top: 25px;
+                    right: 25px;
+                    content: "\e902";
+                    font-family: "icomoon" !important;
+                    color: #6a6c71;
+                    font-size: 8px;
+                    @include transition();
+                }
+                &:not(.collapsed) {
+                    color: $titleColor;
+                    box-shadow: none;
+                    &:before {
+                        transform: rotate(-180deg);
+                    }
+                }
+                &:focus {
+                    box-shadow: none;
+                }
+                &:after {
+                    display: none;
+                }
+            }
+        }
+        .accordion-body {
+            padding: 15px 25px 25px;
+            strong {
+                font-size: 16px;
+                color: $bodyColor;
+                font-weight: 400;
+            }
+        }
+    }
+}
+// sc-faq-style3
+.sc-faq-style3 {
+    .accordion-item {
+        border: none;
+        margin-bottom: 20px;
+        padding: 8px 25px;
+        background: #f7f7f7;
+        border-radius: 2px;
+        box-shadow: none;
+        .accordion-header {
+            .accordion-button {
+                background: transparent;
+                font-size: 20px;
+                padding: 18px 0;
+                color: $titleColor;
+                font-weight: 600;
+                position: relative;
+                border-bottom: 1px solid transparent;
+                &:before {
+                    position: absolute;
+                    top: 18px;
+                    right: 25px;
+                    content: "\e923";
+                    font-family: "icomoon" !important;
+                    font-weight: 400;
+                    @include transition();
+                }
+                &:not(.collapsed) {
+                    color: $titleColor;
+                    box-shadow: none;
+                    border-bottom: 1px solid #e6e6e6;
+                    color: $primaryColor;
+                    &:before {
+                        content: "\e91f";
+                    }
+                }
+                &:focus {
+                    box-shadow: none;
+                }
+                &:after {
+                    display: none;
+                }
+            }
+        }
+        .accordion-body {
+            padding: 15px 0 25px;
+            strong {
+                font-size: 16px;
+                color: $bodyColor;
+                font-weight: 400;
+            }
+        }
+    }
+}
+.sc-searchbar-area {
+    position: relative;
+    height: 70px;
+    border: 2px solid #eeeff1;
+    border-radius: 2px;
+    max-width: 420px;
+    margin-right: 0;
+    margin-left: auto;
+    .input-field,
+    [type="email"] {
+        width: 100%;
+        padding: 10px 20px;
+    }
+    [type="submit"] {
+        font-size: 0;
+        width: 60px;
+        height: 60px;
+        padding: 0;
+        background: $primaryColor;
+    }
+    .sc-primary-btn {
+        padding: 0;
+        right: 2px;
+        min-width: 60px;
+        i {
+            color: #fff;
+            position: absolute;
+            right: 19px;
+            top: 19px;
+        }
+        &::after {
+            display: none;
+        }
+    }
+}
+// <!--Sc Faq CSS -->
+.sc-accordion-style-two {
+    margin-top: 0;
+    padding-top: 100px;
+    .sc-faq-style {
+        .accordion-item {
+            padding: 16px 0;
+        }
+    }
+
+    .sc-essential-shape {
+        top: 0;
+    }
+}

@@ -1,0 +1,52 @@
+// <!--Sc error CSS -->
+.sc-page-error {
+    padding-bottom: 230px;
+}
+.sc-page-error .error-text {
+    color: #102d47;
+    text-align: center;
+}
+.sc-page-error .error-text .error-code {
+    font-size: 100px;
+    color: #102d47;
+    position: relative;
+}
+.sc-page-error .error-text .error-code:after {
+    position: absolute;
+    content: "";
+    background: #eee;
+    height: 1px;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+}
+.sc-page-error .error-text h3.error-message {
+    color: #102d47;
+}
+.sc-page-error .error-text form {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.sc-page-error .error-text form input {
+    border: 1px solid #ddd;
+    color: #444444;
+    padding: 10px 17px;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+.sc-page-error .error-text form button {
+    background: transparent;
+    border: medium none;
+    color: #666666;
+    padding: 11px 16px;
+    position: absolute;
+    right: 0px;
+    top: 0;
+    z-index: 10;
+    font-size: 20px;
+    outline: none;
+    border-radius: 25px;
+}

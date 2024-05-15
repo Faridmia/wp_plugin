@@ -1,0 +1,310 @@
+// <!--Sc Footer CSS -->
+
+.sc-footer-section {
+    background-color: $secondaryColor;
+    .footer-logo {
+        img {
+            height: 40.5px;
+        }
+    }
+    p,
+    a {
+        color: rgba($color: #ffffff, $alpha: 0.8);
+    }
+    .sc-contact-number {
+        padding-top: 18px;
+        .icon-phone {
+            width: 58px;
+            height: 61px;
+            background: $primaryColor;
+            text-align: center;
+            line-height: 61px;
+            border-radius: 8px;
+            display: inline-block;
+            color: #fff;
+            font-size: 35px;
+            margin-right: 24px;
+            &.white-bg-color {
+                background: #fff;
+                color: $primaryColor;
+            }
+        }
+        .contact-number {
+            color: #d6d7e5;
+            font-weight: 500;
+        }
+        .number {
+            display: block;
+            font-weight: 700;
+            font-family: $titleFont;
+            color: #fff;
+            @include transition();
+            font-size: 20px;
+            &:hover {
+                color: $primaryColor;
+            }
+        }
+    }
+    .border-style {
+        padding: 18px 28px;
+        border: 2px solid rgba($color: #fff, $alpha: 0.2);
+        border-radius: 3px;
+        margin-top: 30px;
+    }
+    .footer-title {
+        font-size: 20px;
+        font-weight: 700;
+        display: block;
+        margin-bottom: 30px;
+    }
+    .footer-about {
+        .about-icon {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li {
+                display: inline-block;
+                padding-right: 5px;
+                i {
+                    background: rgba($color: #fff, $alpha: 0.2);
+                    border-radius: 42px;
+                    color: #fff;
+                    width: 42px;
+                    height: 42px;
+                    line-height: 42px;
+                    display: inline-block;
+                    text-align: center;
+                    @include transition();
+                    font-size: 16px;
+                    &:hover {
+                        background: #fff;
+                        color: $primaryColor;
+                    }
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    .footer-menu-area {
+        .footer-menu-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li {
+                padding-bottom: 12px;
+                &:last-child {
+                    padding-bottom: 0;
+                }
+                a {
+                    @include transition();
+                    &:hover {
+                        color: $primaryColor;
+                    }
+                }
+            }
+            i {
+                color: $whiteColor;
+                margin-right: 10px;
+                font-size: 18px;
+            }
+            .footer-map {
+                font-size: 16px;
+                font-weight: 400;
+                color: $whiteColor0_8;
+                span {
+                    display: block;
+                    padding-left: 30px;
+                    margin-top: -30px;
+                }
+            }
+        }
+    }
+
+    .sc-instagram-images {
+        gap: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        img {
+            width: 85px;
+            height: 85px;
+            border-radius: 5px;
+        }
+    }
+    .copyright-area {
+        border-top: 1px solid rgba($color: #d9d9d9, $alpha: 0.2);
+        padding: 28px 0;
+        .copyright-text {
+            a,
+            p {
+                color: #D6D7E;
+                margin: 0;
+            }
+            a {
+                &:hover {
+                    color: $primaryColor;
+                }
+            }
+        }
+    }
+}
+.footer-bg-image2,
+.footer-bg-image1 {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.footer-bg-image1 {
+    background-image: url(../images/bg/footer-bg.jpg);
+}
+.footer-bg-image2 {
+    background-image: url(../images/bg/footer_bg2.jpg);
+}
+.sc-footer-subscribe {
+    .sc-form-inner {
+        width: 55%;
+        gap: 10px;
+    }
+    .sc-subscribe-title {
+        font-size: 30px;
+    }
+    .input-field {
+        position: relative;
+        width: 80%;
+        border-radius: 5px;
+        .icon-send {
+            position: absolute;
+            right: 25px;
+            top: 20px;
+        }
+    }
+    input {
+        height: 60px;
+        line-height: 60px;
+        padding: 0 25px;
+        border-radius: 3px;
+        border: none;
+    }
+    input[type="email"] {
+        background: #ffffff;
+        width: 100%;
+        color: $bodyColor;
+    }
+    input[type="submit"] {
+        color: #fff;
+        padding: 0 36px;
+        font-weight: 600;
+    }
+    ::placeholder {
+        color: #6a6c71 !important;
+        opacity: 1;
+    }
+
+    :-ms-input-placeholder {
+        color: #6a6c71 !important;
+        opacity: 1;
+    }
+
+    ::-ms-input-placeholder {
+        color: #6a6c71 !important;
+        opacity: 1;
+    }
+    .sc-primary-btn {
+        padding: 0;
+        min-width: 180px;
+        text-align: center;
+    }
+}
+.subscribe-style2 {
+    input[type="email"] {
+        padding: 0;
+        background: transparent;
+        border-bottom: 2px solid rgba($color: #fff, $alpha: 0.2);
+        color: #fff;
+    }
+    .input-field .icon-send {
+        right: 0;
+    }
+    ::placeholder {
+        color: #d6d7e5;
+    }
+
+    ::-ms-input-placeholder {
+        color: #d6d7e5;
+    }
+
+    ::-ms-input-placeholder {
+        color: #d6d7e5;
+    }
+    .sc-form-inner {
+        gap: 20px;
+    }
+    .wpcf7-spinner {
+        position: absolute;
+        top: 15px;
+        right: 10px;
+    }
+}
+.footer-subscribe {
+    .footer-des {
+        margin-bottom: 10px;
+    }
+    .subscribe-form {
+        margin-bottom: 50px;
+        position: relative;
+        input {
+            height: 52px;
+            width: 100%;
+            padding: 0 20px;
+            background: transparent;
+            border: 1px solid #fff;
+            color: #fff;
+        }
+        button {
+            background: $whiteColor;
+            color: $titleColor;
+            @include transition();
+            padding: 0 20px;
+            height: 40px;
+            line-height: 0;
+            color: $titleColor;
+            text-align: center;
+            @include transition();
+            border: 1px solid #fff;
+            margin-top: 18px;
+            &:hover {
+                color: $primaryColor;
+            }
+        }
+    }
+}
+.sc-recent-post {
+    .recent-image {
+        max-width: 90px;
+        img {
+            border-radius: 4px;
+        }
+    }
+    .post-date {
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 14px;
+        color: #d6d7e5;
+        display: block;
+        margin-bottom: 10px;
+    }
+    .title {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 30px;
+        a {
+            &:hover {
+                color: $primaryColor;
+            }
+        }
+    }
+    .recent-text {
+        padding-left: 20px;
+    }
+}

@@ -1,0 +1,58 @@
+// <!--Sc global CSS -->
+.sc-global-section-area {
+    background: $secondaryColor;
+    padding-top: 225px;
+    position: relative;
+    margin-top: -125px;
+}
+.sc-global-style-two {
+    margin-top: 0;
+    padding-top: 100px;
+}
+.sc-global-item {
+    .sc-heading-area {
+        .active {
+            color: $primaryColor;
+            font-style: italic;
+        }
+    }
+    .sc-global-content-box {
+        .sc-global-icon {
+            min-width: 195px;
+            height: 195px;
+            line-height: 195px;
+            background: #353950;
+            border-radius: 3px;
+            text-align: center;
+            display: inline-block;
+            margin-right: 30px;
+        }
+        .sc-global-text {
+            .sub-title {
+                color: #d6d7e5;
+                display: block;
+                margin-bottom: 20px;
+                transition: 0.4s;
+                &:hover {
+                    color: #fff;
+                }
+            }
+            .des {
+                color: #d6d7e5;
+            }
+        }
+    }
+    .content-bottom {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+}
+.sc-global-image {
+    position: relative;
+    .sc-images2 {
+        position: absolute;
+        bottom: 45px;
+        left: 35px;
+    }
+}

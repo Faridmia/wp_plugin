@@ -1,0 +1,59 @@
+// <!--Sc Breadcrumbs CSS -->
+.sc-breadcrumbs {
+    position: relative;
+    background-color: $secondaryColor;
+    background-image: url(../images/banner/inner_bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 205px 0 150px;
+    .breadcrumbs-text {
+        text-align: center;
+        .page-title {
+            margin-bottom: 12px;
+            font-size: 40px;
+            color: $whiteColor;
+        }
+        ul {
+            padding: 0;
+            li {
+                color: #fff;
+                display: inline-block;
+                position: relative;
+                padding-right: 20px;
+                margin-right: 12px;
+                &:before {
+                    content: "";
+                    width: 12px;
+                    height: 2px;
+                    background: $whiteColor0_8;
+                    position: absolute;
+                    top: 14px;
+                    right: -4px;
+                }
+                &:last-child {
+                    &::before {
+                        display: none;
+                    }
+                }
+                a {
+                    color: $whiteColor0_8;
+                    @include transition();
+                    &:hover {
+                        color: $primaryColor;
+                    }
+                }
+                &:last-child {
+                    padding-right: 0;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+.sc-breadcrumb-style
+{
+    &.base-theme {
+        background: #0b0f28;
+    }
+}

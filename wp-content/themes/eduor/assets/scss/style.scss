@@ -1,0 +1,142 @@
+/*============================================================
+[Master Stylesheet]
+
+* Template : Eduor - Corporate Business HTML Template
+* Author : SoftCoderes
+* Version:        1.0
+* Author URI : http://www.softcoders.net/ 
+
+=========================================================*/
+/*=======================================================
+TABLE OF CONTENTS:
+
+01 global Style
+02 Spacing CSS
+
+====== section stylsheet ======
+03 header section
+04 banner section
+05 about section
+06 canvas section
+07 service section
+08 feature section
+09 client section
+10 counter section
+11 price section
+12 business section
+13 testimonial section
+14 blog section
+15 apps section
+16 footer section
+====== inner page stylsheet ======
+17 breadcrumb page
+18 blog Page
+19 blog-details Page
+20 faq page
+21 contact page
+22 team Page
+====== responsive stylsheet ======
+23 responsive style  */
+
+@import "main/variable";
+
+// //*========== 01 global Style ==========*//
+@import "main/global";
+
+// //*========== 02 Spacing CSS ==========*//
+@import "main/sc-spacing";
+
+// //*========== 03 header section ==========*//
+@import "sections/header";
+
+//*========== 04 banner section ==========*//
+@import "sections/slider";
+
+//*========== 05 about section ==========*//
+@import "sections/about";
+
+//*========== 06 canvas section ==========*//
+@import "sections/canvas";
+
+//*========== 07 service section ==========*//
+@import "sections/service";
+
+//*========== 10 counter section ==========*//
+@import "sections/counter";
+
+//*========== 12 business section ==========*//
+@import "sections/business";
+
+//*========== 12 business section ==========*//
+@import "sections/team";
+
+//*========== 12 business section ==========*//
+@import "sections/process";
+
+//*========== 12 business section ==========*//
+@import "sections/cta";
+
+//*========== 12 business section ==========*//
+@import "sections/company";
+
+//*========== 12 business section ==========*//
+@import "sections/project";
+
+//*========== 12 business section ==========*//
+@import "sections/success";
+
+//*========== 12 business section ==========*//
+@import "sections/form";
+
+//*========== 12 business section ==========*//
+@import "sections/popular";
+
+//*========== 12 business section ==========*//
+@import "sections/error";
+
+//*========== 12 business section ==========*//
+@import "sections/faq";
+
+//*========== 12 business section ==========*//
+@import "sections/breadcrumb";
+
+//*========== 12 business section ==========*//
+@import "sections/global";
+
+//*========== 12 business section ==========*//
+@import "sections/brand";
+
+//*========== 13 testimonial section ==========*//
+@import "sections/testimonial";
+
+//*========== 14 blog section ==========*//
+@import "sections/blog";
+
+//*========== 16 footer section ==========*//
+@import "sections/footer";
+
+//*========== 17 footer section ==========*//
+@import "sections/feature-list";
+
+// /*########## page style ##########*/
+
+// //*========== 17 breadcrumb page ==========*//
+@import "pages/breadcrumb";
+
+//*========== 18 blog Page ==========*//
+@import "pages/blog";
+
+//*========== 19 blog-details Page ==========*//
+@import "pages/blog-details";
+
+//*========== 20 faq page ==========*//
+@import "pages/faq";
+
+//*========== 21 contact page ==========*//
+@import "pages/contact";
+
+//*========== 22 team Page ==========*//
+@import "pages/team";
+
+//*========== 23 responsive style ==========*//
+@import "main/responsive";

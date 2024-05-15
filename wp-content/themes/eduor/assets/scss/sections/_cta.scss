@@ -1,0 +1,200 @@
+// <!--Sc cta CSS -->
+.sc-cta-section-area {
+    position: relative;
+    margin-top: -220px;
+    .container-fluid {
+        padding-left: 0;
+    }
+}
+
+.sc-cta-style-two {
+    position: relative;
+    margin-top: -110px;
+}
+
+.sc-cta-form-box {
+    width: 65%;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.sc-cta-style-three {
+    background: $primaryColor;
+    padding: 55px 0;
+    .sc-footer-cta-four {
+        .sc-cta-content {
+            .sc-cta-text {
+                margin-right: 375px;
+            }
+        }
+        .sc-cta-content {
+            .sc-cta-form {
+                position: relative;
+                margin-top: -8px;
+                input {
+                    background: $whiteColor;
+                    border-radius: 3px;
+                    width: 132%;
+                    padding: 18px 25px;
+                    font-size: 15px;
+                    font-weight: 400;
+                }
+            }
+        }
+        .triangle-right {
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-top: 25px solid transparent;
+            border-left: 50px solid $primaryColor;
+            border-bottom: 25px solid transparent;
+        }
+        ::placeholder {
+            color: $bodyColor !important;
+            opacity: 1;
+        }
+        :-ms-input-placeholder {
+            color: $bodyColor !important;
+        }
+        ::-ms-input-placeholder {
+            color: $bodyColor !important;
+        }
+    }
+}
+.sc-footer-cta-four {
+    .sc-cta-content {
+        gap: 20px;
+    }
+}
+.sc-cta-style-four {
+    background: url(../images/bg/counter-bg1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 54px 0;
+    .sc-footer-cta-four {
+        .sc-cta-content {
+            .sc-cta-text {
+                margin-right: 375px;
+            }
+        }
+        .sc-cta-content {
+            .sc-cta-form {
+                position: relative;
+                margin-top: -7px;
+                input {
+                    background: $whiteColor;
+                    border-radius: 3px;
+                    width: 131%;
+                    padding: 18px 25px;
+                    font-size: 15px;
+                    font-weight: 400;
+                }
+            }
+        }
+        .triangle-right {
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-top: 25px solid transparent;
+            border-left: 50px solid $primaryColor;
+            border-bottom: 25px solid transparent;
+        }
+        ::placeholder {
+            color: $bodyColor !important;
+            opacity: 1;
+        }
+        :-ms-input-placeholder {
+            color: $bodyColor !important;
+        }
+        ::-ms-input-placeholder {
+            color: $bodyColor !important;
+        }
+    }
+}
+
+.sc-cta-content-box {
+    .sc-cta-content {
+        background: url(../images/bg/buniess.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 50px 80px 39.5px;
+        border-radius: 0px 10px 10px 0px;
+        .sc-cta-text {
+            margin-right: 375px;
+        }
+    }
+}
+
+.sc-footer-cta {
+    .sc-cta-section-area {
+        margin-top: -221px;
+    }
+    .sc-cta-image {
+        flex: 0 0 29%;
+    }
+    .sc-cta-content {
+        flex: 0 0 71%;
+    }
+}
+.sc-footer-cta-two {
+    .sc-cta-content {
+        background: url(../images/bg/buniess.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 60px 80px 50.5px;
+        border-radius: 0px 10px 10px 0px;
+        .sc-cta-text {
+            margin-right: 375px;
+            &.m-0 {
+                padding-right: 20px;
+            }
+        }
+    }
+    .sc-cta-section-area {
+        margin-top: -221px;
+    }
+    .sc-cta-content {
+        flex: 0 0 71%;
+        position: relative;
+        margin-top: -20px;
+        .sc-cta-form {
+            input {
+                background: $whiteColor;
+                border-radius: 3px;
+                padding: 18px 25px;
+                font-size: 15px;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .triangle-right {
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-top: 25px solid transparent;
+        border-left: 50px solid $primaryColor;
+        border-bottom: 25px solid transparent;
+    }
+    ::placeholder {
+        color: $bodyColor !important;
+        opacity: 1;
+    }
+    :-ms-input-placeholder {
+        color: $bodyColor !important;
+    }
+    ::-ms-input-placeholder {
+        color: $bodyColor !important;
+    }
+}

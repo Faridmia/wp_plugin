@@ -1,0 +1,38 @@
+// <!--Sc brand CSS -->
+.sc-brand-section-area {
+    position: relative;
+    background: #f7f7f7;
+}
+.sc-brand-image-box {
+    padding: 75px 0 65px;
+    .sc-brand-image {
+        margin-right: 100px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+// sc-brand-section-two
+.sc-brand-section-two {
+    position: relative;
+    margin-top: -110px;
+    background: none;
+    background: $primaryColor;
+    z-index: 3;
+    &.sc-long-width2 {
+        max-width: 1620px;
+        border-radius: 0px 10px 10px 0px;
+        .container {
+            margin-right: 0;
+            margin-left: auto;
+        }
+    }
+    .sc-brand-image-box {
+        padding: 65px 0 50px;
+    }
+}
+
+// sc-brand-section-two
+.sc-brand-section-three {
+    background: none;
+}
