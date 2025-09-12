@@ -1,0 +1,141 @@
+class Book_Controller extends WP_REST_Controller {
+
+    public function __construct() {
+        $this->namespace = 'library/v1'; // namespace
+        $this->rest_base = 'books';      // route base
+    }
+
+    public function register_routes() {
+        register_rest_route( $this->namespace, '/' . $this->rest_base, array(
+            array(
+                'methods'             => WP_REST_Server::READABLE,
+                'callback'            => array( $this, 'get_items' ),
+                'permission_callback' => '__return_true',
+            ),
+            array(
+                'methods'             => WP_REST_Server::CREATABLE,
+                'callback'            => array( $this, 'create_item' ),
+                'permission_callback' => array( $this, 'permissions_check' ),
+                'args'                => $this->get_endpoint_args_for_item_schema( true ),
+            ),
+        ) );
+
+        register_rest_route( $this->namespace, '/' . $this->rest_base . '/(?P<id>[\d]+)', array(
+            array(
+                'methods'             => WP_REST_Server::READABLE,
+                'callback'            => array( $this, 'get_item' ),
+                'permission_callback' => '__return_true',
+            ),
+            array(
+                'methods'             => WP_REST_Server::EDITABLE,
+                'callback'            => array( $this, 'update_item' ),
+                'permission_callback' => array( $this, 'permissions_check' ),
+            ),
+            array(
+                'methods'             => WP_REST_Server::DELETABLE,
+                'callback'            => array( $this, 'delete_item' ),
+                'permission_callback' => array( $this, 'permissions_check' ),
+            ),
+        ) );
+    }
+
+    // ✅ GET all books
+    public function get_items( $request ) {
+        $query = new WP_Query( array( 'post_type' => 'book', 'posts_per_page' => -1 ) );
+        $books = array();
+
+        foreach ( $query->posts as $post ) {
+            $books[] = $this->prepare_item_for_response( $post, $request );
+        }
+
+        return rest_ensure_response( $books );
+    }
+
+    // ✅ GET single book
+    public function get_item( $request ) {
+        $post_id = (int) $request['id'];
+        $post    = get_post( $post_id );
+
+        if ( empty( $post ) || $post->post_type !== 'book' ) {
+            return new WP_Error( 'no_book', 'Book not found', array( 'status' => 404 ) );
+        }
+
+        return $this->prepare_item_for_response( $post, $request );
+    }
+
+    // ✅ CREATE book
+    public function create_item( $request ) {
+        $book_data = $this->prepare_item_for_database( $request );
+        $post_id   = wp_insert_post( $book_data );
+
+        if ( is_wp_error( $post_id ) ) {
+            return $post_id;
+        }
+
+        return $this->get_item( array( 'id' => $post_id ) );
+    }
+
+    // ✅ UPDATE book
+    public function update_item( $request ) {
+        $post_id   = (int) $request['id'];
+        $book_data = $this->prepare_item_for_database( $request );
+        $book_data['ID'] = $post_id;
+
+        $updated = wp_update_post( $book_data, true );
+
+        if ( is_wp_error( $updated ) ) {
+            return $updated;
+        }
+
+        return $this->get_item( array( 'id' => $post_id ) );
+    }
+
+    // ✅ DELETE book
+    public function delete_item( $request ) {
+        $post_id = (int) $request['id'];
+        $deleted = wp_delete_post( $post_id, true );
+
+        if ( ! $deleted ) {
+            return new WP_Error( 'cant_delete', 'Book not deleted', array( 'status' => 500 ) );
+        }
+
+        return rest_ensure_response( true );
+    }
+
+    // ✅ Permission check (only logged-in users who can edit posts)
+    public function permissions_check( $request ) {
+        return current_user_can( 'edit_posts' );
+    }
+
+    // ✅ Input: prepare for DB
+    protected function prepare_item_for_database( $request ) {
+        return array(
+            'post_title'   => sanitize_text_field( $request['title'] ?? '' ),
+            'post_content' => sanitize_textarea_field( $request['description'] ?? '' ),
+            'post_type'    => 'book',
+            'post_status'  => 'publish',
+            'meta_input'   => array(
+                'author' => sanitize_text_field( $request['author'] ?? '' ),
+                'year'   => absint( $request['year'] ?? 0 ),
+            ),
+        );
+    }
+
+    // ✅ Output: prepare for API response
+    public function prepare_item_for_response( $post, $request ) {
+        return array(
+            'id'       => $post->ID,
+            'title'    => get_the_title( $post->ID ),
+            'content'  => apply_filters( 'the_content', $post->post_content ),
+            'author'   => get_post_meta( $post->ID, 'author', true ),
+            'year'     => get_post_meta( $post->ID, 'year', true ),
+            'link'     => get_permalink( $post->ID ),
+        );
+    }
+}
+
+
+add_action( 'rest_api_init', function() {
+    $controller = new Book_Controller();
+    $controller->register_routes();
+} );
